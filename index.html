@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <button id="signIn">
+            sign in
+        </button>
+        
+    </header>
+
+    <div id="modal">
+        <form>
+            <input type="text" name="Username" id="username" placeholder="username">
+            <input type="password" name="password" id="password" placeholder="password">
+            <button type="submit">Submit</button>
+            <button type="button" id="close">Close</button>
+        </form>
+
+    </div>
+    <script>
+        const signIn = document.getElementById('signIn')
+        const close = document.getElementById('close');
+        const modal = document.getElementById('modal')
+        
+        signIn.addEventListener('click',function () {
+           modal.style.display = "block" 
+        })
+
+        close.addEventListener("click", function() {
+                modal.style.display = "none";
+            } )
+        
+
+
+    </script>
+
+
+</body>
+</html>
